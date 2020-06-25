@@ -1,4 +1,9 @@
 ﻿{
 	"name": "Doctor’s Good Will",
-	"version": "2.2.5"
+	"version": "0.0.1",
+	"info": {
+		"date": "2020-06-25",
+		"message": "このバージョンでは若干の不具合が修正され、全体のパフォーマンスが向上しています。\r詳細は%URL%をご覧ください。",
+		"url": "https://github.com/miyako/test-auto-backup-system"
+	}
 }
