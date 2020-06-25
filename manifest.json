@@ -4,7 +4,7 @@
 	"info": {
 		"date": "2020-06-25",
 		"title": "%DATE% ソフトウェア更新",
-		"message": "このバージョンでは若干の不具合が修正され、全体のパフォーマンスが向上しています。\r詳細は%URL%をご覧ください。",
+		"message": "このバージョンでは若干の不具合が修正され、全体のパフォーマンスが向上しています。\r\r詳細は%URL%をご覧ください。",
 		"url": "https://github.com/miyako/test-auto-backup-system",
 		"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/18.0.3/server.dmg"
 	}
