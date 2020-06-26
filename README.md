@@ -1,9 +1,9 @@
 # test-auto-backup-system
 自動バックアップシステムのテスト用リポジトリ
 
-#### Gitの設定
-
 自動アップデートは，バージョン管理システム**git**および**GitHub**を使用しています。
+
+### Gitの設定
 
 #### Mac
 
@@ -45,6 +45,6 @@ $update_manager.git.push()
 
 ``manifest.json``ファイルをGitHubにプッシュします。GitHubのSSH設定が必要です。
 
-#### GitHub API
+#### GitHubの設定
 
 
