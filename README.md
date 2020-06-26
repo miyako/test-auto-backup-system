@@ -41,8 +41,7 @@ $update_manager.git.reset()
 $update_manager.git.push()
 ```
 
-``manifest.json``ファイルをGitHubにプッシュします。GitHubにSSHで接続できるように設定されていなければなりません。
+``manifest.json``ファイルをGitHubにプッシュします。``git``がGitHubにSSHで接続できるように設定されていなければなりません。
 
 #### GitHubの設定
-
 
