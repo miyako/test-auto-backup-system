@@ -94,3 +94,4 @@ OAuthの認証トークンが下記のフォルダーに作成されます。
 * サーバー側/Application Support/{アプリ名}/developer/token_private.pem
 * サーバー側/Application Support/{アプリ名}/developer/token_public.pem
 
+以後，下記のメソッドでリリースの管理にGitHubの[REST API v3](https://developer.github.com/v3/repos/releases/)が使用できるようになります。
