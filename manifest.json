@@ -10,6 +10,11 @@
 			"name": "server.dmg",
 			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/18.0.3/server.dmg",
 			"size": 189284043
+		},
+		"client": {
+			"name": "client.dmg",
+			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/18.0.3/client.dmg",
+			"size": 189284043
 		}
 	}
 }
