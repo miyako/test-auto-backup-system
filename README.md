@@ -45,3 +45,11 @@ $update_manager.git.push()
 
 #### GitHubの設定
 
+リリースの菅理にはGitHubのREST API（[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)）を使用します。
+
+* GitHub Appを[登録](https://github.com/settings/applications/new)します。
+
+* GitHub Appの``client_id`` ``client_secret`` ``redirect_uri`` を控えます。
+
+[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)はモジュールで処理することができます。
+
