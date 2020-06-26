@@ -94,5 +94,3 @@ OAuthの認証トークンが下記のフォルダーに作成されます。
 * サーバー側/Application Support/{アプリ名}/developer/token_private.pem
 * サーバー側/Application Support/{アプリ名}/developer/token_public.pem
 
-**運用環境**: これらのファイルをサーバー側の該当箇所に置いてください。
-
