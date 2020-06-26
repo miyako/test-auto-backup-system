@@ -34,6 +34,7 @@ $tag_name:=$update_manager.git.version
 
 ```4d
 $tag_name:=$update_manager.git.patch().minor().major()
+$update_manager.git.reset()
 ```
 
-バージョン番号の``patch`` ``minor`` ``major`` 番号（ドットで区切られた数値）をインクリメントします。必要に応じて``manifest.json``ファイルが作成されます。
+バージョン番号の``patch`` ``minor`` ``major`` 番号（ドットで区切られた数値）をインクリメントします。必要に応じて``manifest.json``ファイルが作成されます。``0.0.0``にリセットすることもできます。
