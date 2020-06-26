@@ -158,5 +158,18 @@ $update_manager:=update_manager ($appName)
 $update_manager.preferences.migrate()
 ```
 
+データファイル・インデックスファイル・ログファイルをアプリの外に移動します。最大で **2** 回の再起動が発生します。移行が済んでいなければ，再起動は発生しませんので，アプリのスタートアップにメソッドを実行することができます。
 
+```4d
+C_BOOLEAN($shouldRestart)
+$shouldRestart:=$update_manager.prep()
+
+If ($shouldRestart)
+	$update_manager.restart()
+End if 
+```
+
+1. ジャーナルを停止 → 一時データファイルに切り替え → 再起動
+1. データファイルとインデックスを``/Application Support/{アプリ名}/data``に移動 → 再起動
+1. ジャーナルを開始 → バックアップ
 
