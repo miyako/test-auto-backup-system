@@ -52,6 +52,8 @@ $update_manager.git.push()
 
 * GitHub Appを[登録](https://github.com/settings/applications/new)します。
 
+* ``redirect_uri`` は "http://127.0.0.1:8080/path" に設定します。
+
 * GitHub Appの``client_id`` ``client_secret`` ``redirect_uri`` を控えます。
 
 [Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)はモジュールで処理することができます。
@@ -65,3 +67,23 @@ $update_manager:=update_manager ($appName)
 $update_manager.onWebConnection()
 ```
 
+4D Web Serverを起動し，下記のコードを実行します。
+
+```4d
+If (WEB Is server running)
+	
+	$update_manager:=update_manager (main_application_name)
+	
+	$params:=New object
+	
+	$params.client_id:="..."
+	$params.client_secret:="..."
+	$params.redirect_uri:="http://127.0.0.1:8080/path"
+	$params.login:="{GitHubのログイン名}"
+	$params.scope:="public_repo"
+	$params.state:=Generate UUID
+	
+	$update_manager.git.authorize($params)
+	
+End if 
+```
