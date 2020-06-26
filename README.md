@@ -144,6 +144,8 @@ $status:=$update_manager.git.getRelease($remote)  //latest
 
 ### 移行アシスタント
 
+#### Preferences
+
 v17からv18にアップグレードすると，**Preferences**フォルダーの名称が変更され，バックアップ設定ファイルの拡張子が変更されます。
 
 * Preferences > Settings
@@ -158,13 +160,10 @@ $update_manager:=update_manager ($appName)
 $update_manager.preferences.migrate()
 ```
 
-
 拡張子``4DSettings``以外のファイルとフォルダーを``/Application Support/{アプリ名}/preferences``に移動します。すでにフォルダーが存在する
-場合，
-フォルダー名に
-フォルダー名に連番が
-フォルダー名に連番がつけられ，
+場合，上書きを避けるため，フォルダー名に連番がつけられます。
 
+#### Data
 
 データファイル・インデックスファイル・ログファイルをアプリの外に移動します。最大で **2** 回の再起動が発生します。移行が済んでいなければ，再起動は発生しませんので，アプリのスタートアップにメソッドを実行することができます。
 
