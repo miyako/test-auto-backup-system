@@ -5,8 +5,6 @@
 
 ### Gitの設定
 
-#### Mac
-
 * ``git``はMacにプリインストールされています。
 * [GitHub をはじめましょう](https://help.github.com/ja/github/getting-started-with-github)
 * [GitHub に SSH で接続する](https://help.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh)
