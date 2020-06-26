@@ -11,7 +11,7 @@
 
 #### リポジトリ
 
-モジュールを初期化するためにリポジトリのローカルパスを指定してください。このリポジトリは，``git``でバージョン管理されていることが前提です。
+モジュールを初期化するためにローカルgitリポジトリのパスを指定してください。
 
 ```4d
 $path:="/Users/miyako/Documents/miyako@github.com/test-auto-backup-system/"
