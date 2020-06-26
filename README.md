@@ -122,6 +122,26 @@ $releases:=$update_manager.git.releases($remote)
 1. マニフェストにアセットのダウンロードURLを書き込み
 1. マニフェストをリポジトリにプッシュ
 
+* 例
+
+```4d
+$appName:="My First App"
+$update_manager:=update_manager ($appName)
+
+$remote:="miyako/test-auto-backup-system"
+
+$releases:=$update_manager.git.releases($remote)
+
+$tags:=$releases.extract("tag_name")
+
+If ($tags.length#0)
+	$tag:=$tags[0]
+	$status:=$update_manager.git.getRelease($remote;$tag)
+End if 
+
+$status:=$update_manager.git.getRelease($remote)  //latest
+```
+
 ### 移行アシスタント
 
 v17からv18にアップグレードすると，**Preferences**フォルダーの名称が変更され，バックアップ設定ファイルの拡張子が変更されます。
