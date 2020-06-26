@@ -38,3 +38,13 @@ $update_manager.git.reset()
 ```
 
 バージョン番号の``patch`` ``minor`` ``major`` 番号（ドットで区切られた数値）をインクリメントします。必要に応じて``manifest.json``ファイルが作成されます。``0.0.0``にリセットすることもできます。
+
+```4d
+$update_manager.git.push()
+```
+
+``manifest.json``ファイルをGitHubにプッシュします。GitHubのSSH設定が必要です。
+
+#### GitHub API
+
+
