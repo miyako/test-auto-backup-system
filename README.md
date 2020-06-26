@@ -94,4 +94,34 @@ OAuthの認証トークンが下記のフォルダーに作成されます。
 * サーバー側/Application Support/{アプリ名}/developer/token_private.pem
 * サーバー側/Application Support/{アプリ名}/developer/token_public.pem
 
-以後，下記のメソッドでリリースの管理にGitHubの[REST API v3](https://developer.github.com/v3/repos/releases/)が使用できるようになります。
+以後，モジュールのメソッドでリリースの管理にGitHubの[REST API v3](https://developer.github.com/v3/repos/releases/)が使用できるようになります。
+
+```4d
+$remote:="miyako/test-auto-backup-system"
+$releases:=$update_manager.git.releases($remote)
+```
+
+* [``releases()``](https://developer.github.com/v3/repos/releases/#list-releases)
+* [``createRelease()``](https://developer.github.com/v3/repos/releases/#create-a-release)
+* [``updateRelease()``](https://developer.github.com/v3/repos/releases/#update-a-release)
+* [``removeRelease()``](https://developer.github.com/v3/repos/releases/#delete-a-release)
+* [``getRelease()``](https://developer.github.com/v3/repos/releases/#get-a-release-by-tag-name)
+* [``createAsset()``](https://developer.github.com/v3/repos/releases/#upload-a-release-asset)
+* [``updateAsset()``](https://developer.github.com/v3/repos/releases/#update-a-release-asset)
+* [``removeAsset()``](https://developer.github.com/v3/repos/releases/#delete-a-release-asset)
+
+これらのメソッドは開発環境でビルド後処理に使用することができます。
+
+1. **バージョン番号**を決定
+1. マニフェストに**バージョン番号**を書き込み
+1. ビルド
+1. ビルドアプリの``Info.plist``に**バージョン番号**を書き込み
+1. 署名・ディスクイメージ作成・公証・ステープル
+1. GitHubにリリースを**バージョン番号**で作成
+1. アプリのディスクイメージでリリースのアセットを作成（アップロード）
+1. マニフェストにアセットのダウンロードURLを書き込み
+1. マニフェストをリポジトリにプッシュ
+
+
+
+
