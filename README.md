@@ -14,6 +14,9 @@
 モジュールを初期化するためにローカルgitリポジトリのパスを指定してください。
 
 ```4d
+$appName:="My First App"
+$update_manager:=update_manager ($appName)
+
 $path:="/Users/miyako/Documents/miyako@github.com/test-auto-backup-system/"
 
 $params:=New object
@@ -52,4 +55,13 @@ $update_manager.git.push()
 * GitHub Appの``client_id`` ``client_secret`` ``redirect_uri`` を控えます。
 
 [Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)はモジュールで処理することができます。
+
+**On Web Connection**に下記のコードを記述します。
+
+```4d
+$appName:="My First App"
+$update_manager:=update_manager ($appName)
+
+$update_manager.onWebConnection()
+```
 
