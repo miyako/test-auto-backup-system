@@ -122,6 +122,21 @@ $releases:=$update_manager.git.releases($remote)
 1. マニフェストにアセットのダウンロードURLを書き込み
 1. マニフェストをリポジトリにプッシュ
 
+### 移行アシスタント
+
+v17からv18にアップグレードすると，**Preferences**フォルダーの名称が変更され，バックアップ設定ファイルの拡張子が変更されます。
+
+* Preferences > Settings
+* BackupBackup.xml > backup.4DSettings
+
+4Dが自動的に書き換える上記のファイル以外で**Preferences**フォルダーに置かれているカスタム設定ファイルをアプリの外に移動することができます。
+
+```4d
+$appName:="My First App"
+$update_manager:=update_manager ($appName)
+
+$update_manager.preferences.migrate()
+```
 
 
 
