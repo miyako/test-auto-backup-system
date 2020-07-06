@@ -181,3 +181,17 @@ End if
 1. インデックスファイルを``/Application Support/{アプリ名}/journal``に移動 → **再起動**
 1. ジャーナルを開始 → バックアップ
 
+### ダイアログ
+
+マニフェストのURLを指定すると，必要に応じ，バックグラウンドでダウンロードが実行されます。過去に途中までダウンロードしたファイルがある場合，ファイルを削除してからダウンロードを開始します。ダイアログを閉じた後もダウンロードは継続します。
+
+```4d
+$manifestUrl:="https://raw.githubusercontent.com/miyako/test-auto-backup-system/master/manifest.json"
+$update_manager.check($manifestUrl)
+```
+
+<img width="453" alt="Screen Shot 2020-06-26 at 17 44 27" src="https://user-images.githubusercontent.com/1725068/85838557-b7092100-b7d4-11ea-8fb5-38a5a1299d8d.png">
+
+ダウンロードが完了すると，ディスクイメージが展開され，アプリが取り出されます。アップデートの準備ができると，「いますぐ更新」ボタンが表示されます。
+
+<img width="453" alt="Screen Shot 2020-07-01 at 14 45 38" src="https://user-images.githubusercontent.com/1725068/86207484-9b719200-bba9-11ea-9f47-eaa42bb09e2f.png">
