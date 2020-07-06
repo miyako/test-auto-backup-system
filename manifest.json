@@ -1,8 +1,8 @@
 ﻿{
 	"name": "Doctor’s Good Will",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"info": {
-		"date": "2020-06-25",
+		"date": "2020-07-06",
 		"title": "%DATE% ソフトウェア更新",
 		"message": "このバージョンでは若干の不具合が修正され、全体のパフォーマンスが向上しています。\r\r詳細は%URL%をご覧ください。",
 		"url": "https://github.com/miyako/test-auto-backup-system",
@@ -13,8 +13,8 @@
 		},
 		"client": {
 			"name": "client.dmg",
-			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/18.0.3/client.dmg",
-			"size": 170282765
+			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/1.0.1/client.dmg",
+			"size": 171464374
 		}
 	}
 }
