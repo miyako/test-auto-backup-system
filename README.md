@@ -195,3 +195,7 @@ $update_manager.check($manifestUrl)
 ダウンロードが完了すると，ディスクイメージが展開され，アプリが取り出されます。アップデートの準備ができると，「いますぐ更新」ボタンが表示されます。
 
 <img width="453" alt="Screen Shot 2020-07-01 at 14 45 38" src="https://user-images.githubusercontent.com/1725068/86207484-9b719200-bba9-11ea-9f47-eaa42bb09e2f.png">
+
+* ビルド〜署名〜申請〜公証〜押印〜公開
+
+<img width="742" alt="スクリーンショット 2020-07-06 20 14 37" src="https://user-images.githubusercontent.com/1725068/86587837-6019fd80-bfc5-11ea-99a1-831b5423569e.png">
