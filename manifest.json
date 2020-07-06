@@ -1,6 +1,6 @@
 ﻿{
 	"name": "Doctor’s Good Will",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"info": {
 		"date": "2020-07-06",
 		"title": "%DATE% ソフトウェア更新",
@@ -13,8 +13,8 @@
 		},
 		"client": {
 			"name": "client.dmg",
-			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/1.0.1/client.dmg",
-			"size": 171464374
+			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/1.0.2/client.dmg",
+			"size": 171271123
 		},
 		"single": {
 			"name": "single.dmg",
