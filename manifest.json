@@ -15,6 +15,11 @@
 			"name": "client.dmg",
 			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/1.0.1/client.dmg",
 			"size": 171464374
+		},
+		"single": {
+			"name": "single.dmg",
+			"download_url": "https://github.com/miyako/test-auto-backup-system/releases/download/1.0.1/single.dmg",
+			"size": 191688541
 		}
 	}
 }
