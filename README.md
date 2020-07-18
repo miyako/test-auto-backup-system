@@ -1,5 +1,5 @@
-# test-auto-backup-system
-自動バックアップシステムのテスト用リポジトリ
+# test-auto-update-system
+自動アップデートシステムのテスト用リポジトリ
 
 自動アップデートは，バージョン管理システム**git**および**GitHub**を使用しています。
 
@@ -27,24 +27,21 @@ $update_manager.git.setup($path)
 
 バージョン情報は，``manifest.json``ファイルで管理します。
 
-```4d
-$tag_name:=$update_manager.git.version
+**TODO**: privateリポジトリの場合，``HTTP Get``で``manifest.json``ファイルが取得できません。
+
+**TODO**: ビルド用のランタイムの場所は4D.appと同じフォルダーであることを想定しています。4D.appがトランスロケーションされている場合，ランタイムのパスがみつからずにビルドに失敗します。その場合，アプリのフルパスを
+
+**TODO**: ``IsOEM``キーがセットされていません。
+
+**TODO**: macOS 10.14.6+11.3.1では，
+
+```
+xcrun altool --store-password-in-keychain
 ```
 
-リポジトリに``manifest.json``ファイルがなければ，```0.0.0``が返されます。
+に問題があります。キーチェーンの「場所」が空欄になります。回避するためには，マニュアル操作で項目を追加してください。
 
-```4d
-$tag_name:=$update_manager.git.patch().minor().major()
-$update_manager.git.reset()
-```
-
-バージョン番号の``patch`` ``minor`` ``major`` 番号（ドットで区切られた数値）をインクリメントします。必要に応じて``manifest.json``ファイルが作成されます。``0.0.0``にリセットすることもできます。
-
-```4d
-$update_manager.git.push()
-```
-
-``manifest.json``ファイルをGitHubにプッシュします。``git``がGitHubにSSHで接続できるように設定されていなければなりません。
+**TODO**: 4D ServerとVolume Desktopのマイナーバージョン番号が一致しない場合，ビルドに失敗します。
 
 #### GitHubの設定
 
@@ -195,3 +192,7 @@ $update_manager.check($manifestUrl)
 ダウンロードが完了すると，ディスクイメージが展開され，アプリが取り出されます。アップデートの準備ができると，「いますぐ更新」ボタンが表示されます。
 
 <img width="453" alt="Screen Shot 2020-07-01 at 14 45 38" src="https://user-images.githubusercontent.com/1725068/86207484-9b719200-bba9-11ea-9f47-eaa42bb09e2f.png">
+
+* ビルド〜署名〜申請〜公証〜押印〜公開
+
+<img width="742" alt="スクリーンショット 2020-07-06 20 14 37" src="https://user-images.githubusercontent.com/1725068/86587837-6019fd80-bfc5-11ea-99a1-831b5423569e.png">
