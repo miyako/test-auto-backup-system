@@ -33,6 +33,14 @@ $update_manager.git.setup($path)
 
 **TODO**: ``IsOEM``キーがセットされていません。
 
+**TODO**: macOS 10.14.6+11.3.1では，
+
+```
+xcrun altool --store-password-in-keychain
+```
+
+に問題があります。キーチェーンの「場所」が空欄になります。回避するためには，マニュアル操作で項目を追加してください。
+
 #### GitHubの設定
 
 リリースの菅理にはGitHubのREST API（[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)）を使用します。
