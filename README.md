@@ -31,6 +31,8 @@ $update_manager.git.setup($path)
 
 **TODO**: ビルド用のランタイムの場所は4D.appと同じフォルダーであることを想定しています。4D.appがトランスロケーションされている場合，ランタイムのパスがみつからずにビルドに失敗します。その場合，アプリのフルパスを
 
+**TODO**: ``IsOEM``キーがセットされていません。
+
 #### GitHubの設定
 
 リリースの菅理にはGitHubのREST API（[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)）を使用します。
