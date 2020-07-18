@@ -41,6 +41,8 @@ xcrun altool --store-password-in-keychain
 
 に問題があります。キーチェーンの「場所」が空欄になります。回避するためには，マニュアル操作で項目を追加してください。
 
+**TODO**: 4D ServerとVolume Desktopのマイナーバージョン番号が一致しない場合，ビルドに失敗します。
+
 #### GitHubの設定
 
 リリースの菅理にはGitHubのREST API（[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)）を使用します。
