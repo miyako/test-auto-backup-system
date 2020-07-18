@@ -1,5 +1,5 @@
-# test-auto-backup-system
-自動バックアップシステムのテスト用リポジトリ
+# test-auto-update-system
+自動アップデートシステムのテスト用リポジトリ
 
 自動アップデートは，バージョン管理システム**git**および**GitHub**を使用しています。
 
