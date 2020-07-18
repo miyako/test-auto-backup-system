@@ -27,25 +27,6 @@ $update_manager.git.setup($path)
 
 バージョン情報は，``manifest.json``ファイルで管理します。
 
-```4d
-$tag_name:=$update_manager.git.version
-```
-
-リポジトリに``manifest.json``ファイルがなければ，```0.0.0``が返されます。
-
-```4d
-$tag_name:=$update_manager.git.patch().minor().major()
-$update_manager.git.reset()
-```
-
-バージョン番号の``patch`` ``minor`` ``major`` 番号（ドットで区切られた数値）をインクリメントします。必要に応じて``manifest.json``ファイルが作成されます。``0.0.0``にリセットすることもできます。
-
-```4d
-$update_manager.git.push()
-```
-
-``manifest.json``ファイルをGitHubにプッシュします。``git``がGitHubにSSHで接続できるように設定されていなければなりません。
-
 #### GitHubの設定
 
 リリースの菅理にはGitHubのREST API（[Web application flow](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)）を使用します。
